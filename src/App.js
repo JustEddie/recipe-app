@@ -3,18 +3,19 @@ import "./App.css";
 import DietaryOption from "./pages/DietaryOption";
 import Pages from "./pages/Pages";
 import { Link } from "react-router-dom";
+import Options from "./components/Options";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Link className="link"to={"/"}>
+    <div className="App">
+      <BrowserRouter>
+        <Link className="link" to={"/"}>
           <h1 className="logo">Eddie's Recipe App</h1>
         </Link>
-        <DietaryOption />
+        <Options />
         <Pages />
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   );
 }
 

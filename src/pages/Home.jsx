@@ -1,4 +1,5 @@
 import React from "react";
+import Options from "../components/Options";
 import Popular from "../components/Popular";
 import Search from "../components/Search";
 import Veggie from "../components/Veggie";

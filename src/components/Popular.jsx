@@ -29,7 +29,7 @@ function Popular() {
   return (
     <div>
       <Wrapper>
-        <h1>Popular Picks</h1>
+        <h1>Popular</h1>
         <Splide
           options={{
             perPage: 4
