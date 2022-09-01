@@ -7,8 +7,10 @@ import { FaSearch } from 'react-icons/fa';
 function Search() {
     const [input, setInput] = useState("");
     const [barOpened, setBarOpened] = useState(false);
+    const [result, setResult] = useState([]);
     const formRef = useRef();
     const inputFocus = useRef();
+
   
     const onFormSubmit = e => {
       // When form submited, clear input, close the searchbar and do something with input

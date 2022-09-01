@@ -7,6 +7,11 @@ const Wrapper = styled.section`
   padding: 1.5rem 4em;
   background: papayawhip;
   margin : 2rem 0rem;
+  min-height: 40vh;
+
+h1{
+    margin: 0.5rem 0 1rem 0;
+}
 `;
 
 const Card = styled.div`
@@ -19,6 +24,11 @@ const Card = styled.div`
     width : 80%;
     height: 100%;
   }
+
+  p{
+    font-size:1.5rem;
+  }
+
 `
 
 const Form = styled.form`
