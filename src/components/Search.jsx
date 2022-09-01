@@ -11,7 +11,19 @@ function Search() {
     const formRef = useRef();
     const inputFocus = useRef();
 
+    const [search, setSearch] = useState([]);
+
   
+    const getSearch = async (input) => {
+      const api = await fetch(
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=52850cdf3fc941fd89b0ac10e71ba2ad&number=12&query=${input}`
+      );
+      const data = await api.json();
+      setSearch(data.results);
+      console.log(search);
+    };
+
+
     const onFormSubmit = e => {
       // When form submited, clear input, close the searchbar and do something with input
       e.preventDefault();
@@ -19,6 +31,7 @@ function Search() {
       setBarOpened(false);
       // After form submit, do what you want with the input value
       console.log(`Form was submited with input: ${input}`);
+      getSearch(input)
     };
   
     return (
