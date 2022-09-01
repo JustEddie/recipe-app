@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/react-splide/css";
-import styled from "styled-components";
+import {Wrapper, Card} from "./Template"
 
 function Popular() {
     const [popular, setPopular] = useState([]);
@@ -13,7 +13,7 @@ function Popular() {
     
     const getPopular = async () => {
         const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=1a520533dda447eca16309cf5f2f3b6f&number=9`
+        `https://api.spoonacular.com/recipes/random?apiKey=1a520533dda447eca16309cf5f2f3b6f&number=12`
         );
         const data = await api.json();
         setPopular(data.recipes);
@@ -43,15 +43,6 @@ function Popular() {
   )
 }
 
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
-  margin : 4rem 0rem;
-`;
 
-const Card = styled.div`
-  height: 10 rem;
-  width:5 rem;
-`
 
 export default Popular
