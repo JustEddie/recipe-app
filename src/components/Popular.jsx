@@ -31,8 +31,8 @@ function Popular() {
                 return (
                   <SplideSlide key={recipe.id}>
                     <Card>
-                      <p>{recipe.title}</p>
                       <img src={recipe.image} alt={recipe.title} />
+                      <p>{recipe.title}</p>
                     </Card>
                   </SplideSlide>
                 )
