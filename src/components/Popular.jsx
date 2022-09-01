@@ -17,6 +17,7 @@ function Popular() {
         );
         const data = await api.json();
         setPopular(data.recipes);
+        console.log(data);
     }    
   return (
     <div>
