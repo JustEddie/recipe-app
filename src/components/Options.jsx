@@ -1,22 +1,19 @@
 import React from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { List } from "../components/Template";
+import { List, OptionButton } from "../components/Template";
 
 function Options() {
   return (
     <List>
-      <NavLink to={"/diet/vegan"}>
-        <p>Vegan</p>
-      </NavLink>
       <NavLink to={"/diet/gluten"}>
-        <p>Gluten Free</p>
+        <OptionButton>Gluten Free</OptionButton>
       </NavLink>
       <NavLink to={"/diet/dairy"}>
-        <p>Dairy Free</p>
+        <OptionButton>Dairy Free</OptionButton>
       </NavLink>
       <NavLink to={"/diet/peanut"}>
-        <p>Peanut Free</p>
+        <OptionButton>Peanut Free</OptionButton>
       </NavLink>
     </List>
   );
