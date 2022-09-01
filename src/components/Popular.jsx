@@ -38,4 +38,15 @@ function Popular() {
   )
 }
 
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+  margin : 4rem 0rem;
+`;
+
+const Card = styled.div`
+  height: 10 rem;
+  width:5 rem;
+`
+
 export default Popular
