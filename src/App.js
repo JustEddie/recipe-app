@@ -1,14 +1,19 @@
-import { BrowserRouter } from 'react-router-dom';
-import './App.css';
-import Pages from './pages/Pages';
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+import DietaryOption from "./pages/DietaryOption";
+import Pages from "./pages/Pages";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
-      <h1 style={{"font-family": "Qwitcher Grypen", "font-size":"5rem", "text-align":"center"}}>Eddie's Recipe App</h1>
-      <Pages />
-    </div>
+      <div className="App">
+        <Link className="link"to={"/"}>
+          <h1 className="logo">Eddie's Recipe App</h1>
+        </Link>
+        <DietaryOption />
+        <Pages />
+      </div>
     </BrowserRouter>
   );
 }

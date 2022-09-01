@@ -12,13 +12,20 @@ function Popular() {
     }, [])
     
     const getPopular = async () => {
+
+      const check = localStorage.getItem('popular');
+
+      if(check){
+        setPopular(JSON.parse(check));
+      }else{
         const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=1a520533dda447eca16309cf5f2f3b6f&number=12`
+        `https://api.spoonacular.com/recipes/random?apiKey=388aba4291784a01b499a73dd6d7f336&number=12`
         );
         const data = await api.json();
+        localStorage.setItem('popular', JSON.stringify(data.recipes));
         setPopular(data.recipes);
         console.log(data);
-    }    
+    }  };  
   return (
     <div>
       <Wrapper>

@@ -18,6 +18,10 @@ const Card = styled.div`
   height: 15 rem;
   width:5 rem;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   img {
     object-fit : fill;
     border-radius: 5rem;
@@ -78,5 +82,10 @@ font-size: 1.5rem;
   color: white;
 `;
 
+const List = styled.div`
+    display:flex;
+    justify-content:center;
+    margin:1rem;
+`;
 
-export {Wrapper, Card, Form, Input, Button};
+export {Wrapper, Card, Form, Input, Button, List};

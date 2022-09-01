@@ -1,14 +1,11 @@
-import React from 'react'
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Options() {
-
   return (
-<NavLink>
-
-</NavLink>
-  )
+<div>dd</div>
+  );
 }
 
-export default Options
+export default Options;

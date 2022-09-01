@@ -37,7 +37,6 @@
   }
 }
 
-
 .Search {
   font-family: sans-serif;
   text-align: center;
@@ -69,4 +68,15 @@ button {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+}
+
+.logo{
+  font-family: Qwitcher Grypen;
+  font-size: 5rem;
+  text-align: center;
+
+}
+.link{
+  text-decoration: none;
+  color: black;
 }

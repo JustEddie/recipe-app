@@ -5,19 +5,25 @@ import "@splidejs/react-splide/css";
 import {Wrapper, Card} from "./Template"
 
 function Veggie() {
-    const [popular, setPopular] = useState([]);
+    const [veggie, setVeggie] = useState([]);
 
     useEffect(() => {
       getVeggie();
     }, [])
     
     const getVeggie = async () => {
+      const check = localStorage.getItem('veggie');
+
+      if(check){
+        setVeggie(JSON.parse(check));
+      }else{
         const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=1a520533dda447eca16309cf5f2f3b6f&number=12&tags=vegetarian`
+        `https://api.spoonacular.com/recipes/random?apiKey=388aba4291784a01b499a73dd6d7f336&number=12&tags=vegetarian`
         );
         const data = await api.json();
-        setPopular(data.recipes);
-    }    
+        localStorage.setItem('veggie', JSON.stringify(data.recipes));
+        setVeggie(data.recipes);
+    }    };
   return (
     <div>
       <Wrapper>
@@ -27,7 +33,7 @@ function Veggie() {
             perPage: 4
           }}
         >
-            {popular.map((recipe)=>{
+            {veggie.map((recipe)=>{
                 return (
                   <SplideSlide key={recipe.id}>
                     <Card>
