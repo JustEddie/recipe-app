@@ -1,14 +1,16 @@
-import React from 'react'
-import Popular from '../components/Popular'
-import Veggie from '../components/Veggie'
+import React from "react";
+import Popular from "../components/Popular";
+import Search from "../components/Search";
+import Veggie from "../components/Veggie";
 
 function Home() {
   return (
     <div>
-        <Popular />
-        <Veggie />
+      <Search />
+      <Popular />
+      <Veggie />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

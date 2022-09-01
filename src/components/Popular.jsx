@@ -22,12 +22,17 @@ function Popular() {
     <div>
       <Wrapper>
         <h3>Popular Picks</h3>
-        <Splide>
+        <Splide
+          options={{
+            perPage: 4
+          }}
+        >
             {popular.map((recipe)=>{
                 return (
                   <SplideSlide key={recipe.id}>
                     <Card>
                       <p>{recipe.title}</p>
+                      <img src={recipe.image} alt={recipe.title} />
                     </Card>
                   </SplideSlide>
                 )
