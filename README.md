@@ -1,5 +1,5 @@
 ## used api 
-<styled>
+* styled
 https://styled-components.com/
-<splide>
+* splide
 https://splidejs.com/integration/react-splide/
