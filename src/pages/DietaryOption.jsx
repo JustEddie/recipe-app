@@ -11,7 +11,7 @@ function DietaryOption() {
 
   const getDiet = async (name) => {
     const api = await fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=52850cdf3fc941fd89b0ac10e71ba2ad&number=12&intolerances=${name}`
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=ae53036104e44e8aa4be53ed54cc53ad&number=12&intolerances=${name}`
     );
     const data = await api.json();
     setDiet(data.results);

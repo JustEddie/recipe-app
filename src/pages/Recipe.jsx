@@ -2,7 +2,13 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Search from "../components/Search";
-import { Wrapper, Card, Grid, Details, DetailRecipe } from "../components/Template";
+import {
+  Wrapper,
+  Card,
+  Grid,
+  Details,
+  DetailRecipe,
+} from "../components/Template";
 
 function Recipe() {
   const [recipe, setRecipe] = useState([]);
@@ -33,11 +39,12 @@ function Recipe() {
           <p dangerouslySetInnerHTML={{ __html: recipe.summary }}></p>
         </Details>
         <DetailRecipe>
-{recipe.extendedIngredients.map((ingredient)=>{
-    return(
-        <li>{ingredient.nameClean}</li>
-    )
-})}
+          {/* <ul>
+            {recipe.extendedIngredients.map((ingredient) => {
+             return <li key={ingredient.id}>{ingredient.original}</li>
+            })}
+          </ul> */}
+          <a href={recipe.sourceUrl}>See the recipe</a>
         </DetailRecipe>
       </Wrapper>
     </div>
