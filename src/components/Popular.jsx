@@ -3,9 +3,11 @@ import { useState, useEffect } from 'react'
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/react-splide/css";
 import {Wrapper, Card} from "./Template"
+import {useNavigate} from "react-router-dom"
 
 function Popular() {
     const [popular, setPopular] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
       getPopular();
@@ -37,7 +39,7 @@ function Popular() {
         >
             {popular.map((recipe)=>{
                 return (
-                  <SplideSlide key={recipe.id}>
+                  <SplideSlide onClick={ () =>navigate("/recipe/"+ recipe.id)}  key={recipe.id}>
                     <Card>
                       <img src={recipe.image} alt={recipe.title} />
                       <p>{recipe.title}</p>
