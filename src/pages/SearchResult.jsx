@@ -34,7 +34,7 @@ function SearchResult() {
         <Grid>
           {search.map((recipe) => {
             return (
-              <Card onClick={e=>console.log(e.target.value)} value={recipe.id} key={recipe.id}>
+              <Card onClick={ () =>navigate("/recipe/"+ recipe.id)} value={recipe.id} key={recipe.id}>
                 <img src={recipe.image} alt={recipe.title} />
                 <p>{recipe.title}</p>
               </Card>

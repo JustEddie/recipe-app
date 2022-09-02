@@ -3,10 +3,12 @@ import { useState, useEffect } from 'react'
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/react-splide/css";
 import {Wrapper, Card} from "./Template"
+import {useNavigate} from "react-router-dom"
 
 function Veggie() {
     const [veggie, setVeggie] = useState([]);
-
+    const navigate = useNavigate();
+    
     useEffect(() => {
       getVeggie();
     }, [])
@@ -35,7 +37,7 @@ function Veggie() {
         >
             {veggie.map((recipe)=>{
                 return (
-                  <SplideSlide key={recipe.id}>
+                  <SplideSlide onClick={ () =>navigate("/recipe/"+ recipe.id)} key={recipe.id}>
                     <Card>
                       <img src={recipe.image} alt={recipe.title} />
                       <p>{recipe.title}</p>
