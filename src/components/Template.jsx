@@ -6,7 +6,8 @@ const Wrapper = styled.section`
   padding: 1.5rem 4em;
   background: papayawhip;
   margin: 2rem 0rem;
-  min-height: 40vh;
+  min-height: 35vh;
+  display:inline-grid;
 
   h1 {
     margin: 0.5rem 0 1rem 0;
@@ -14,8 +15,9 @@ const Wrapper = styled.section`
 `;
 
 const Card = styled.div`
-  height: 15 rem;
-  width: 5 rem;
+  height: 100%;
+  width: 100%;
+  display: inline-grid;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -24,12 +26,15 @@ const Card = styled.div`
   img {
     object-fit: fill;
     border-radius: 5rem;
-    width: 80%;
+    width: 95%;
     height: 100%;
   }
 
   p {
     font-size: 1.5rem;
+    z-index:10;
+    font-weight: 600;
+    text-align:center;
   }
 `;
 
@@ -102,13 +107,13 @@ const Grid = styled.div`
   grid-template-columns: 27vw 27vw 27vw;
   gap: 3rem;
   align-items: center;
-  padding: 5%;
+
 
   @media (max-width: 768px) {
     grid-template-columns: 40vw 40vw;
-  }
-`;
-const DietCard = styled.div`
+  };
+
+  .Card{
   display: flex;
   align-self: center;
   flex-direction: column;
@@ -117,8 +122,11 @@ const DietCard = styled.div`
 
   img {
     border-radius: 5rem;
-  }
+  }}
+
 `;
+
+
 
 export {
   Wrapper,
@@ -128,6 +136,5 @@ export {
   Button,
   List,
   OptionButton,
-  DietCard,
   Grid,
 };

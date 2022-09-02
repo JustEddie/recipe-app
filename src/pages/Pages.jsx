@@ -1,16 +1,16 @@
 import React from "react";
-import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
-import Options from "../components/Options";
+import { Route, Routes } from "react-router-dom";
 import DietaryOption from "./DietaryOption";
 
 import Home from "./Home";
-
+import SearchResult from "./SearchResult";
 
 function Pages() {
   return (
     <Routes>
-        <Route path="/diet/:options" element={<DietaryOption />}/>
-        <Route path="/" element={<Home />}/>
+      <Route path="/diet/:options" element={<DietaryOption />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/searchresult/:search" element={<SearchResult />} />
     </Routes>
   );
 }

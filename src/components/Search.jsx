@@ -2,26 +2,15 @@ import React from 'react'
 import { Form, Button, Input } from './Template'
 import {useState, useRef} from 'react'
 import { FaSearch } from 'react-icons/fa';
+import SearchResult from '../pages/SearchResult';
 
 
 function Search() {
     const [input, setInput] = useState("");
     const [barOpened, setBarOpened] = useState(false);
-    const [result, setResult] = useState([]);
     const formRef = useRef();
     const inputFocus = useRef();
 
-    const [search, setSearch] = useState([]);
-
-  
-    const getSearch = async (input) => {
-      const api = await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=52850cdf3fc941fd89b0ac10e71ba2ad&number=12&query=${input}`
-      );
-      const data = await api.json();
-      setSearch(data.results);
-      console.log(search);
-    };
 
 
     const onFormSubmit = e => {
@@ -29,9 +18,12 @@ function Search() {
       e.preventDefault();
       setInput("");
       setBarOpened(false);
+      return (
+        <SearchResult input={input}/>
+      )
       // After form submit, do what you want with the input value
-      console.log(`Form was submited with input: ${input}`);
-      getSearch(input)
+      // console.log(`Form was submited with input: ${input}`);
+      // getSearch(input)
     };
   
     return (

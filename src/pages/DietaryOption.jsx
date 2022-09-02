@@ -27,10 +27,10 @@ function DietaryOption() {
         <Grid>
           {diet.map((recipe) => {
             return (
-              <DietCard key={recipe.id}>
+              <Card key={recipe.id}>
                 <img src={recipe.image} alt={recipe.title} />
                 <p>{recipe.title}</p>
-              </DietCard>
+              </Card>
             );
           })}
         </Grid>
