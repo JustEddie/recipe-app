@@ -4,10 +4,12 @@ import { useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { Wrapper, Card, Grid } from "../components/Template";
+import {useNavigate} from "react-router-dom"
 
 function DietaryOption() {
   const [diet, setDiet] = useState([]);
   let params = useParams();
+  const navigate = useNavigate();
 
   const getDiet = async (name) => {
     const api = await fetch(
@@ -27,7 +29,7 @@ function DietaryOption() {
         <Grid>
           {diet.map((recipe) => {
             return (
-              <Card key={recipe.id}>
+              <Card onClick={ () =>navigate("/recipe/"+ recipe.id)} key={recipe.id}>
                 <img src={recipe.image} alt={recipe.title} />
                 <p>{recipe.title}</p>
               </Card>
