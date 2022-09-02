@@ -125,6 +125,27 @@ const Grid = styled.div`
   }}
 
 `;
+const Details = styled.div`
+  align-items: center;
+  padding: 3%;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  img {
+    border-radius: 2rem;
+  }
+
+  p {
+    padding: 3rem;
+    font-size: 1.5rem;
+  }
+`
+const DetailRecipe = styled.div`
+  grid-template-columns: 30vw 50vw;
+  gap: 3rem;
+`
 
 
 export {
@@ -136,4 +157,6 @@ export {
   List,
   OptionButton,
   Grid,
+  Details,
+  DetailRecipe
 };
