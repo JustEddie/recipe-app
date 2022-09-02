@@ -127,7 +127,6 @@ const Grid = styled.div`
 `;
 
 
-
 export {
   Wrapper,
   Card,

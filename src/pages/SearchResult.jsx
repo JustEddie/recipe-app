@@ -1,8 +1,10 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
+import Search from '../components/Search';
+import { Wrapper, Card, Grid } from "../components/Template";
 
-function SearchResult(searchInput) {
+function SearchResult() {
     const [search, setSearch] = useState([]);
     let params = useParams();
 
@@ -17,15 +19,30 @@ function SearchResult(searchInput) {
       console.log(input);
     };
 
-    // useEffect(() => {
-    //     getSearch(params.options);
-    //   }, [params.search]);
     useEffect(() => {
-      getSearch(searchInput);
-      console.log(searchInput);
-    }, [params.search]);
+        getSearch(params.search);
+      }, [params.search]);
+    // useEffect(() => {
+    //   getSearch(searchInput);
+    //   console.log(searchInput);
+    // }, [params.search]);
   return (
-    <div>SearchResult</div>
+    <div>
+      <Search />
+      <Wrapper>
+        <h1>{params.search}</h1>
+        <Grid>
+          {search.map((recipe) => {
+            return (
+              <Card key={recipe.id}>
+                <img src={recipe.image} alt={recipe.title} />
+                <p>{recipe.title}</p>
+              </Card>
+            );
+          })}
+        </Grid>
+      </Wrapper>
+    </div>
   )
 }
 

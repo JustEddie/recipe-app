@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import { Wrapper, Card, DietCard, Grid } from "../components/Template";
+import { Wrapper, Card, Grid } from "../components/Template";
 
 function DietaryOption() {
   const [diet, setDiet] = useState([]);

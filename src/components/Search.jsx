@@ -3,6 +3,7 @@ import { Form, Button, Input } from './Template'
 import {useState, useRef} from 'react'
 import { FaSearch } from 'react-icons/fa';
 import SearchResult from '../pages/SearchResult';
+import {useNavigate} from 'react-router-dom';
 
 
 function Search() {
@@ -10,6 +11,7 @@ function Search() {
     const [barOpened, setBarOpened] = useState(false);
     const formRef = useRef();
     const inputFocus = useRef();
+    const navigate = useNavigate();
 
 
 
@@ -18,9 +20,10 @@ function Search() {
       e.preventDefault();
       setInput("");
       setBarOpened(false);
-      return (
-        <SearchResult input={input}/>
-      )
+      navigate("/searchresult/" + input );
+      // return (<div>dd</div>
+      //   <SearchResult input={input}/>
+      // )
       // After form submit, do what you want with the input value
       // console.log(`Form was submited with input: ${input}`);
       // getSearch(input)
