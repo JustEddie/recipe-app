@@ -147,6 +147,20 @@ const DetailRecipe = styled.div`
   gap: 3rem;
 `
 
+const Subscription = styled.button`
+  display: inline-block;
+  position:absolute;
+  top: 2rem;
+  right:3rem;
+  border-radius: 10rem;
+  background: transparent;
+  border: 2px solid palevioletred;
+  color: palevioletred;
+  margin: 0 1em;
+  padding: 0.25em 1em;
+`
+
+
 
 export {
   Wrapper,
@@ -158,5 +172,6 @@ export {
   OptionButton,
   Grid,
   Details,
-  DetailRecipe
+  DetailRecipe,
+  Subscription
 };

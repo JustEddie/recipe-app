@@ -5,6 +5,7 @@ import DietaryOption from "./DietaryOption";
 import Home from "./Home";
 import Recipe from "./Recipe";
 import SearchResult from "./SearchResult";
+import SubscriptionForm from "./SubscriptionForm";
 
 function Pages() {
   return (
@@ -13,6 +14,7 @@ function Pages() {
       <Route path="/searchresult/:search" element={<SearchResult />} />
       <Route path="/diet/:options" element={<DietaryOption />} />
       <Route path="/recipe/:id" element={<Recipe />} />
+      <Route path="/subscription/" element={<SubscriptionForm />} />
     </Routes>
   );
 }
