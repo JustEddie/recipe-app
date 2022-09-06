@@ -187,10 +187,22 @@ const SubscriptionInput = styled.input`
 `;
 
 const Message = styled.label`
-	margin-bottom: 0.5em;
 	color: palevioletred;
     display: block;
+    margin-bottom: 5rem;
+    font-size: 1.2rem;
 `;
+
+export const SubscriptionButton = styled.button`
+  	padding: 0.5em;
+	color: palevioletred;
+	background: papayawhip;
+	border: none;
+	border-radius: 3rem;
+	width: 50%;
+	margin-bottom: 0.5em;
+  margin-top: 2rem;
+`
 
 
 export {

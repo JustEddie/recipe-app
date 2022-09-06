@@ -2,8 +2,8 @@
     "users": [
       {
         "id": 1,
-        "first_name": "Sebastian",
-        "last_name": "Eschweiler",
+        "full_name": "Sebastian Eschweiler",
+        "last_name": "",
         "email": "sebastian@codingthesmartway.com"
       },
       {
