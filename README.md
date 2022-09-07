@@ -17,7 +17,7 @@
 
 * <a href="https://react-icons.github.io/react-icons">React Icons</a>
 
-<!-- * <a href="https://spoonacular.com/food-api/console#Dashboard">Spoonacular</a> -->
+* <a href="https://spoonacular.com/food-api/console#Dashboard">Spoonacular</a>
 
 #### It looks Like : 
 #### main page
