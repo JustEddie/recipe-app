@@ -3,19 +3,16 @@
       {
         "id": 1,
         "full_name": "Sebastian Eschweiler",
-        "last_name": "",
         "email": "sebastian@codingthesmartway.com"
       },
       {
         "id": 2,
-        "first_name": "Steve",
-        "last_name": "Palmer",
+        "full_name": "Steve Palmer",
         "email": "steve@codingthesmartway.com"
       },
       {
         "id": 3,
-        "first_name": "Ann",
-        "last_name": "Smith",
+        "full_name": "Ann Smith",
         "email": "ann@codingthesmartway.com"
       }
     ]
