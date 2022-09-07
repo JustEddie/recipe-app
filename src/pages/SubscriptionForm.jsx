@@ -31,11 +31,10 @@ function SubscriptionForm() {
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name: {name},email:{email} }),
+      body: JSON.stringify({ full_name: {name},email:{email} }),
     };
-    fetch("https://reqres.in/api/posts", requestOptions)
+    fetch("http://localhost:3000/users", requestOptions)
       .then((response) => response.json())
-      .then((data) => this.setState({ postId: data.id }));
   }
 
   return (
